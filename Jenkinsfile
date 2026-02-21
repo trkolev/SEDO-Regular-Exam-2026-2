@@ -20,7 +20,7 @@ pipeline{
             }
             steps{
                 echo 'Building...'
-                bat 'dotnet build -no-restore'
+                bat 'dotnet build --no-restore'
             }
         }
         stage('Test'){
@@ -31,7 +31,7 @@ pipeline{
             }
             steps{
                 echo 'Testing...'
-                bat 'dotnet test -no-build --verbosity normal'
+                bat 'dotnet test --no-build --verbosity normal'
             }
         }
     }
